@@ -45,8 +45,9 @@
             $(function () {
                 // Summernote
               
-                
+              
                 $('#summernote').summernote()
+                $('.note-editable').attr('onkeyup','send()');
                 console.log("yahan hogaya change");
                 //console.log("han" + $('#summernote').val());
                 //window.postMessage("Sending data from WebView" + $('#summernote').val() ,'*');
