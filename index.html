@@ -51,6 +51,7 @@
               
                 
                 $('#summernote').summernote()
+                window.postMessage("Sending data from WebView" + $('#summernote').val() );
             
           
             })
