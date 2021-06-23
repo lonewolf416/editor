@@ -21,7 +21,7 @@
                
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <textarea id="summernote">
+                        <textarea id="summernote" onkeyup="send()">
                 Place <em>some</em> <u>text</u> <strong>here</strong>
                         </textarea>
                     </div>
@@ -47,13 +47,20 @@
               
                 
                 $('#summernote').summernote()
-                console.log("han" + $('#summernote').val());
+                //console.log("han" + $('#summernote').val());
                 //window.postMessage("Sending data from WebView" + $('#summernote').val() ,'*');
-                window.ReactNativeWebView.postMessage("Data from web yay");
+               // window.ReactNativeWebView.postMessage("Data from web yay");
                 
             
           
             })
+            function send() {
+                console.log("sdfhg");
+                console.log($('#summernote').val());
+                window.ReactNativeWebView.postMessage($('#summernote').val());
+                
+                
+            }
         </script>
     </body>
 </html>
