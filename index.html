@@ -48,8 +48,12 @@
         <script>
             $(function () {
                 // Summernote
+              
+                
                 $('#summernote').summernote()
-                console.log($('#summernote').val()); 
+                var value = $('#summernote').val();
+                window.postMessage(value);
+          
             })
         </script>
     </body>
